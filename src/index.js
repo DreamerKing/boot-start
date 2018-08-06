@@ -1,3 +1,3 @@
 require("./index.css");
 const show = require('./show');
-show("Webpack");
+show("Webpack5");
