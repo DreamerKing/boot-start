@@ -15,6 +15,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.jsx?$/,
+                use: ["babel-loader"]
+            },
+            {
                 test: /\.css$/,
                 loaders: ExtractTextPlugin.extract({
                     use: ['css-loader?minimize']

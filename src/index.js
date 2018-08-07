@@ -1,3 +1,5 @@
-require("./index.css");
-const show = require('./show');
-show("Webpack5");
+import "./index.css";
+import Test from "./show";
+
+const test = new Test("DreamerKing");
+test.show();
