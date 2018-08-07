@@ -1,29 +1,50 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+    mode: "development",
     context: path.resolve(__dirname, "../"), //默认是项目的根目录
-    entry: "./src/index.js",
+    entry: "./src/index",
     output: {
         path: path.resolve(__dirname, "../dist"),
         filename: "bundle.js",
         publicPath: "/dist"
     },
     resolve:{
-        modules: ["node_modules", "./src"]
+        modules: ["node_modules", "./src"],
+        extensions: [".js", ".ts"]
     },
     module: {
         rules: [
             {
+                test: /\.tsx?$/,
+                loader: 'awesome-typescript-loader',
+                options: {
+                    useBabel: true,
+                    babelOptions:{
+                        babelrc: true
+                    },
+                   babelCore: "babel-core"
+                }
+            },
+            {
                 test: /\.css$/,
-                loaders: ExtractTextPlugin.extract({
-                    use: ['css-loader?minimize']
-                })
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../build'
+                        }
+                    },
+                    'css-loader?minimize'
+                ]
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin({
+        new CheckerPlugin(),
+        new MiniCssExtractPlugin({
             filename: "css/[name]_[contenthash:6].css"
         })
     ],
