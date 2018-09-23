@@ -1,0 +1,31 @@
+{
+  "name": "start-typescript",
+  "version": "1.0.0",
+  "description": "typscript config",
+  "keywords": [
+    "typescript",
+    "ts",
+    "config"
+  ],
+  "author": "DreamerKing <wangxianzhao@aidigger.com>",
+  "homepage": "https://github.com/DreamerKing/boot-start/tree/master/packages/start-typescript#readme",
+  "license": "MIT",
+  "main": "lib/start-typescript.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DreamerKing/boot-start.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/DreamerKing/boot-start/issues"
+  }
+}
