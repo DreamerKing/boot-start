@@ -40,5 +40,6 @@
     "ts-node": "^7.0.1",
     "typescript": "^3.0.3",
     "webpack-cli": "^3.1.1"
-  }
+  },
+  "gitHead": "a1d4f7be3acccceb93b21926f3b86347b3b977a5"
 }
