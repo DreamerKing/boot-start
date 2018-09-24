@@ -4,10 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack --config configs/base.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "gitHead": "f9c1389c9d96cbb1416b8f2ae02c69b9f301a859"
+  "gitHead": "f9c1389c9d96cbb1416b8f2ae02c69b9f301a859",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "html-webpack-plugin": "^3.2.0"
+  }
 }
